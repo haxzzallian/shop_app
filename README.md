@@ -1,4 +1,4 @@
-# Exp_App
+# Shop_App
 
 A new Flutter project.
 
