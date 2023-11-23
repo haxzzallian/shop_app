@@ -20,6 +20,12 @@ class ProductItem extends StatelessWidget {
           textAlign: TextAlign.center,
         ),
         backgroundColor: Colors.black54,
+        trailing: IconButton(
+          icon: Icon(
+            Icons.shopping_cart,
+          ),
+          onPressed: () {},
+        ),
       ),
     );
   }
