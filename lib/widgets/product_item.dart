@@ -27,12 +27,14 @@ class ProductItem extends StatelessWidget {
           ),
         ),
         footer: GridTileBar(
-          leading: IconButton(
-              onPressed: () => product.toggleFavoriteStatus(),
-              icon: Icon(
-                product.isFavorite ? Icons.favorite : Icons.favorite_border,
-                color: Theme.of(context).accentColor,
-              )),
+          leading: Consumer<Product>(
+            builder: (ctx, product, child) => IconButton(
+                onPressed: () => product.toggleFavoriteStatus(),
+                icon: Icon(
+                  product.isFavorite ? Icons.favorite : Icons.favorite_border,
+                  color: Theme.of(context).accentColor,
+                )),
+          ),
           title: Text(
             product.title,
             textAlign: TextAlign.center,
@@ -48,5 +50,6 @@ class ProductItem extends StatelessWidget {
         ),
       ),
     );
+    // child: ,
   }
 }
